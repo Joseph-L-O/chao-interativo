@@ -8,12 +8,12 @@ aprender e se divertir.
 ## Uma amostra de como o projeto está funcionando
 
 ![Gif 2](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gP1N6Uz8_jqBZPEwDGUwl2_uWIsisxgzuvaf2qPzAn-MoPWAHFJo11P-BrAfawW-E98TE2tfYBgGVSvyKB4s--fpOGFZA=w350-h200)  ![Gif 3](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gP9EuZLV1Tpu7yF16HHykCH1zzr-mzdekd91tUwtsY-OhiL995oWJFA0ZIbjPlZM-0xBmNXPWrtcWdv0D856-Qy6Pml0g=w350-h200) 
-![Gif 4](https://lh3.google.com/u/0/d/18Qv2ieNe4pmeqnc73UmgfsWiW5yJ7vtl=w350-h200-iv2#right) 
-![Gif 5](https://lh3.google.com/u/0/d/1uLJNHvP6scKn6kOUb1-MZWBHg90-jQVM=w1920-h904-iv1#right)
+![Gif 4](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gMyjD0aY3xnRrUSE3uy1DSOGXT8G7hquln5sFzeZQhbjVdwkdN7OaQqX4OP-Hw3LHxlcZ3Sx0fCRfPUtcP1TJabq65GBQ=w350-h200)
+![Gif 5](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gOG08yL-QU6q-Oz_sgJCdhIjB7RoOqQaPlPD4eLJrBriJsyjhOVC3FiUflQHt7EUX0x23hisZqcwDqZTuz-qukm6Febwg=w350-h200)
 
 ## Funcionamento 
 
-![Gif MediaPipe](https://lh3.google.com/u/0/d/1KZm3VAddoS_Fa11zK8D595owJfkwrhed=w455-h480-iv1) ![Gif Denovo](https://lh3.google.com/u/0/d/1Hjlyo9wnNl23u59pwD0_Swap58fwqIqI=w400-h1500-iv2)
+![Gif MediaPipe](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gM2MmV71VXcOdpgpv41UsARCM8zRfC_FYEQdI-6BQvBCmzI-rTYtQdIcyVWDHhPku0OxYt0B1YS5Zr1Kd4Fm9q7A_5AkA=w455-h480-iv1) ![Gif Denovo](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gNeyx32Plkp13X2MS7YGxOA_aIFqV9RsltrBVA_Dh_KOdbSXUK9dh07IKbHn9p2MwJpK68pyMUnR7quLCy7EDZCv_KMIg=w400-h1500-iv2)
 
 Nossa câmera ajustada próximo ao projetor faz a captura, manda para o programa, que processa e retorna a imagem projetada no chão.
 
@@ -31,14 +31,14 @@ Com a identificação das mãos e com seus pontos de captura, conseguimos adapta
 
 #### Com o VSCode aberto pressione `F1` ou `Ctrl + Shift + P` para abrir a paleta de comandos.
 
-![Paleta](https://lh3.google.com/u/0/d/1-eIrkO3oDBVZxqdSwdgSulncia_S7i-i=w1920-h904-iv1)
+![Paleta](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gObv_Mg_f0ZVKUXCSKqA80-e8D48uVrP4a9rqpjFGoQynSR4jDeJ8Ffa3_HM0gcxuUd7qwIciy2Asm_1xNxgbNIcfMv=w1920-h904-iv1)
 
 
 #### Com a paleta aberta digite `Live Server: Open With Live Server`.
 
 #### E pronto, seu projeto abrirá no seu navegador padrão e com a permissão de utilização da câmera, funcionará.
 
-![Gif Jogo](https://s1.gifyu.com/images/Mozilla_Firefox_2022-11-30_00-59-36.gif)
+![Imgur](https://i.imgur.com/0EB65k4.gifv)
 
 ## Explicando as funções
 
