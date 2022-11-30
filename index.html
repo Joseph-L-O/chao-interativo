@@ -10,7 +10,6 @@
       src: url("Heavitas.woff") format("woff");
     }
 
-    /* @import url('./Heavitas.woff'); */
     body {
       margin: 0;
       font-family: 'Heavitas';
@@ -24,16 +23,9 @@
     .output_canvas {
       position: absolute;
       right: 0;
-      /* display: none; */
     }
   </style>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.125.2/build/three.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.125.2/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.125.2/examples/js/controls/OrbitControls.js"></script>
-  <!-- <script src="https://threejs.org/build/three.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/three@0.125.2/examples/js/libs/fflate.min.js"></script>
-
-
+  <script src="./js/jquery-3.6.1.min.js"></script>
   <script src="./js/camera_utils.js"></script>
   <script src="./js/control_utils.js"></script>
   <script src="./js/drawing_utils.js"></script>
@@ -42,244 +34,37 @@
 
 <body>
   <div class="container">
+    <input type="range" size="1280" value="1280" draggable="true">
+    <input type="range" size="720" value="720" >
     <video class="input_video" style="-webkit-transform: scaleX(-1);transform: scaleX(-1);"></video>
     <canvas class="output_canvas" width="0" height="0"></canvas>
-    <!-- <input type="text" id="x">
-    <input type="text" id="y"> -->
   </div>
-  <!-- <script src="./js/three.js"></script> -->
+
   <script src="./js/drawercanvas/silabas.js"></script>
   <script src="./js/drawercanvas/index.js"></script>
 
   <script type="module">
-    // import * as FBXLoader from 'https://cdn.jsdelivr.net/npm/three@0.125.2/examples/js/loaders/FBXLoader.js';
-    // // let videoElement = document.querySelectorAll(".input_video")[0]
-    // // videoElement.style.transform = "rotationY(180deg);"
-
     const hands = new Hands({
       locateFile: (file) => {
+        console.log(file)
         return `./js/${file}`;
       }
     });
     hands.setOptions({
-      maxNumHands: 2,
+      maxNumHands: 30,
       modelComplexity: 1,
-      minDetectionConfidence: 0.5,
-      minTrackingConfidence: 0.5
+      minDetectionConfidence: 0.4,
+      minTrackingConfidence: 0.4
     });
-    hands.onResults(animate);
-
+    hands.onResults(onResults);
     const camera = new Camera(videoElement, {
       onFrame: async () => {
-
         await hands.send({ image: videoElement });
       },
       width: 1280,
       height: 720
     });
     camera.start();
-
-    //------------------------------------model--------------------------------
-
-    let cam, scene, renderer, clock, rightArm;
-
-    init();
-    animate();
-
-    function init() {
-
-      cam = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.01, 10000);
-      cam.position.set(0, 0, - 10);
-
-      clock = new THREE.Clock();
-
-      scene = new THREE.Scene();
-      scene.background = new THREE.Color(0xffffff);
-
-      const light = new THREE.HemisphereLight(0xbbbbff, 0x444422);
-      light.position.set(0, 1, 0);
-      scene.add(light);
-
-      // model
-      const loader = new THREE.GLTFLoader();
-      loader.load('./models/mao direita.glb', function (gltf) {
-
-        const model = gltf.scene;
-
-        rightArm = [
-          // model.getObjectByName("object0"),
-          model.getObjectByName('basemao1'),
-          model.getObjectByName('polegar01'),
-          model.getObjectByName('polegar02'),
-          model.getObjectByName('polegar03'),
-          model.getObjectByName('polegar04'),
-
-          model.getObjectByName('basemao2'),
-          model.getObjectByName('indicador1'),
-          model.getObjectByName('indicador2'),
-          model.getObjectByName('indicador3'),
-
-          model.getObjectByName('basemao3'),
-          model.getObjectByName('medio1'),
-          model.getObjectByName('medio2'),
-          model.getObjectByName('medio3'),
-
-          model.getObjectByName('basemao4'),
-          model.getObjectByName('anelar1'),
-          model.getObjectByName('anelar2'),
-          model.getObjectByName('anelar3'),
-
-          model.getObjectByName('basemao5'),
-          model.getObjectByName('mindinho1'),
-          model.getObjectByName('mindinho2'),
-          model.getObjectByName('mindinho3'),
-        ]
-        model.name = "righthand"
-        // const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-        // model.traverse(function (child) {
-
-        //   if (child instanceof THREE.Mesh) {
-
-        //     child.material = material;
-
-        //   }
-
-        // });
-        model.scale.set(5, 5, 5)
-        scene.add(model);
-        model.rotation.set(-1, -1.5, 0.5)
-      });
-
-      renderer = new THREE.WebGLRenderer({ antialias: true });
-      renderer.setPixelRatio(window.devicePixelRatio);
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.outputEncoding = THREE.sRGBEncoding;
-      document.body.appendChild(renderer.domElement);
-
-      window.addEventListener('resize', onWindowResize, false);
-
-      const controls = new THREE.OrbitControls(cam, renderer.domElement);
-      controls.target.set(0, 1, 0);
-      controls.update();
-
-    }
-    function render() {
-      renderer.render(scene, camera)
-    }
-    function onWindowResize() {
-
-      cam.aspect = window.innerWidth / window.innerHeight;
-      cam.updateProjectionMatrix();
-
-      renderer.setSize(window.innerWidth, window.innerHeight);
-
-    }
-
-    function animate(results) {
-
-      // requestAnimationFrame(animate);
-
-      if (results?.multiHandLandmarks) {
-        results.multiHandLandmarks.map((landmarks, index) => {
-          if (rightArm) {
-            landmarks.map((land, ind) => {
-              scene.attach(rightArm[ind]);
-              // console.log(HAND_CONNECTIONS)
-
-              // var selectedObject = scene.getObjectByName("cubehand" + ind);
-              // scene.remove(selectedObject);
-
-              // const geometry = new THREE.BoxGeometry(.1, .1, .1);
-              // const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-              // const cube = new THREE.Mesh(geometry, material);
-              // cube.position.set(land.x * 5, land.y * 5 * -1, land.z * 5)
-              // cube.name = "cubehand" + ind;
-              // scene.add(cube);
-
-              let v1 = new THREE.Vector3(landmarks[HAND_CONNECTIONS[ind][0]].x * 5, landmarks[HAND_CONNECTIONS[ind][0]].y * 5, landmarks[HAND_CONNECTIONS[ind][0]].z * 5)
-              let v2 = new THREE.Vector3(landmarks[HAND_CONNECTIONS[ind][1]].x * 5, landmarks[HAND_CONNECTIONS[ind][1]].y * 5, landmarks[HAND_CONNECTIONS[ind][1]].z * 5)
-
-              var quaternion = new THREE.Quaternion();
-
-              quaternion.setFromUnitVectors(v1, v2);
-
-              var matrix = new THREE.Matrix4();
-
-              matrix.makeRotationFromQuaternion(quaternion);
-
-              // rightArm[ind].applyMatrix4( matrix );
-
-              rightArm[ind].quaternion.angleTo( quaternion );
-
-              rightArm[ind].position.x = (land.x) * 5
-              rightArm[ind].position.y = (land.y) * 3 * -1
-              rightArm[ind].position.z = (land.z) * 5
-
-              // rightArm[ind].parent.position.x = (landmarks[0].x) *5 
-              // rightArm[ind].parent.position.y = (landmarks[0].y) *5 * -1 
-              // rightArm[ind].parent.position.z = (landmarks[0].z) *5 
-              if (rightArm[ind].name == "basemao1")
-                scene.getObjectByName("righthand").attach(rightArm[ind])
-              if (rightArm[ind].name == "polegar01")
-                scene.getObjectByName("basemao1").attach(rightArm[ind])
-              if (rightArm[ind].name == "polegar02")
-                scene.getObjectByName("polegar01").attach(rightArm[ind])
-              if (rightArm[ind].name == "polegar03")
-                scene.getObjectByName("polegar02").attach(rightArm[ind])
-              if (rightArm[ind].name == "polegar04")
-                scene.getObjectByName("polegar03").attach(rightArm[ind])
-
-              if (rightArm[ind].name == "basemao2")
-                scene.getObjectByName("basemao1").attach(rightArm[ind])
-              if (rightArm[ind].name == "indicador1")
-                scene.getObjectByName("basemao1").attach(rightArm[ind])
-              if (rightArm[ind].name == "indicador2")
-                scene.getObjectByName("indicador1").attach(rightArm[ind])
-              if (rightArm[ind].name == "indicador3")
-                scene.getObjectByName("indicador2").attach(rightArm[ind])
-
-
-              if (rightArm[ind].name == "basemao3")
-                scene.getObjectByName("basemao1").attach(rightArm[ind])
-              if (rightArm[ind].name == "medio1")
-                scene.getObjectByName("basemao1").attach(rightArm[ind])
-              if (rightArm[ind].name == "medio2")
-                scene.getObjectByName("medio1").attach(rightArm[ind])
-              if (rightArm[ind].name == "medio3")
-                scene.getObjectByName("medio2").attach(rightArm[ind])
-
-
-              if (rightArm[ind].name == "basemao4")
-                scene.getObjectByName("basemao1").attach(rightArm[ind])
-              if (rightArm[ind].name == "anelar1")
-                scene.getObjectByName("basemao1").attach(rightArm[ind])
-              if (rightArm[ind].name == "anelar2")
-                scene.getObjectByName("anelar1").attach(rightArm[ind])
-              if (rightArm[ind].name == "anelar3")
-                scene.getObjectByName("anelar2").attach(rightArm[ind])
-
-              if (rightArm[ind].name == "basemao5")
-                scene.getObjectByName("basemao1").attach(rightArm[ind])
-              if (rightArm[ind].name == "mindinho1")
-                scene.getObjectByName("basemao1").attach(rightArm[ind])
-              if (rightArm[ind].name == "mindinho2")
-                scene.getObjectByName("mindinho1").attach(rightArm[ind])
-              if (rightArm[ind].name == "mindinho3")
-                scene.getObjectByName("mindinho2").attach(rightArm[ind])
-
-            })
-
-
-
-          }
-        })
-      }
-
-      renderer.render(scene, cam);
-
-    }
-    // hands.onResults(onResults); 
-
   </script>
 </body>
 

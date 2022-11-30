@@ -2,8 +2,8 @@ let middleScreenW = window.innerWidth / 2
 let middleScreenH = window.innerHeight / 2
 
 
-let words = ["AL-GO-DÃO", "LI-NHO", "TE-CE-LON","FI-BRA"]
-let wordsmeaning = [
+const words = ["AL-GO-DÃO", "LI-NHO", "TE-CE-LON","FI-BRA"]
+const wordsmeaning = [
     {
         title: "ALGODÃO",
         description: "Qui aliqua aliqua deserunt reprehenderit mollit voluptate occaecat anim adipisicing duis ullamco adipisicing pariatur. Aliquip consequat laboris incididunt pariatur aute. Proident ullamco laboris esse esse ut eu do. Quis duis ut sint ad incididunt. Sit mollit anim aute eu exercitation pariatur quis sunt. Voluptate occaecat commodo exercitation aliqua labore consectetur et incididunt veniam et ut."
