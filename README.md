@@ -10,7 +10,7 @@ aprender e se divertir.
 ![Gif 2](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gP1N6Uz8_jqBZPEwDGUwl2_uWIsisxgzuvaf2qPzAn-MoPWAHFJo11P-BrAfawW-E98TE2tfYBgGVSvyKB4s--fpOGFZA=w350-h200#right)  
 ![Gif 3](https://lh3.google.com/u/0/d/1IUAJimEDDdavSEcfD9aG-TIch6h_kMpQ=w350-h200-iv1) 
 ![Gif 4](https://lh3.google.com/u/0/d/18Qv2ieNe4pmeqnc73UmgfsWiW5yJ7vtl=w350-h200-iv1) 
-![Gif 5](https://lh3.google.com/u/0/d/1uLJNHvP6scKn6kOUb1-MZWBHg90-jQVM=w350-h200-iv1)
+![Gif 5](https://lh3.google.com/u/0/d/1uLJNHvP6scKn6kOUb1-MZWBHg90-jQVM=w1920-h904-iv1)
 
 ## Funcionamento 
 
