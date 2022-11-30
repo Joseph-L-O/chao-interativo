@@ -38,7 +38,7 @@ Com a identificação das mãos e com seus pontos de captura, conseguimos adapta
 
 #### E pronto, seu projeto abrirá no seu navegador padrão e com a permissão de utilização da câmera, funcionará.
 
-![Imgur](https://i.imgur.com/0EB65k4.gifv)
+![Imgur](https://i.imgur.com/0EB65k4.gif)
 
 ## Explicando as funções
 
