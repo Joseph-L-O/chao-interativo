@@ -35,10 +35,6 @@ Com a identificação das mãos e com seus pontos de captura, conseguimos adapta
 
 ![Imgur](https://i.imgur.com/0EB65k4.gif)
 
-<h2 align="center">  Explicando as funções </h2>
-
-passos 
-
 <h2 align="center">  Autores </h2>
 
 ![](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/74804074&v=4&h=100&w=100&fit=cover&mask=circle)  ![](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/98779786&v=4&h=100&w=100&fit=cover&mask=circle)
