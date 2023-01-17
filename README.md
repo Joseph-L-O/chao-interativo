@@ -7,7 +7,7 @@ aprender e se divertir.
 
 <h2 align="center"> Uma amostra de como o projeto está funcionando</h2>
 
-![Gif 2](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gP2JnnWEqYdp2m7AKBx9GP2oAfXnu_MDLnUgvexcc8ZP3yXMzHSvslStvBNlkn07m0fJ_p49-g3lJyOKJ_UCUPvurbJbA=w1366-h615) 
+![Gif 2](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gP2JnnWEqYdp2m7AKBx9GP2oAfXnu_MDLnUgvexcc8ZP3yXMzHSvslStvBNlkn07m0fJ_p49-g3lJyOKJ_UCUPvurbJbA=w1366-h615)
 
 <h2 align="center"> Funcionamento </h2>
 
@@ -29,9 +29,6 @@ Com a identificação das mãos e com seus pontos de captura, conseguimos adapta
 
 #### Com o VSCode aberto pressione `F1` ou `Ctrl + Shift + P` para abrir a paleta de comandos.
 
-![Paleta](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gObv_Mg_f0ZVKUXCSKqA80-e8D48uVrP4a9rqpjFGoQynSR4jDeJ8Ffa3_HM0gcxuUd7qwIciy2Asm_1xNxgbNIcfMv=w1920-h904-iv1)
-
-
 #### Com a paleta aberta digite `Live Server: Open With Live Server`.
 
 #### E pronto, seu projeto abrirá no seu navegador padrão e com a permissão de utilização da câmera, funcionará.
@@ -40,15 +37,10 @@ Com a identificação das mãos e com seus pontos de captura, conseguimos adapta
 
 <h2 align="center">  Explicando as funções </h2>
 
-
+passos 
 
 <h2 align="center">  Autores </h2>
 
-- [@Joseph_L_O](https://www.github.com/joseph-l-o)![](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/74804074&v=4&h=100&w=100&fit=cover&mask=circle) 
-- [@DennisBozzi](https://github.com/DennisBozzi/)![](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/98779786&v=4&h=100&w=100&fit=cover&mask=circle)
+![](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/74804074&v=4&h=100&w=100&fit=cover&mask=circle)  ![](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/98779786&v=4&h=100&w=100&fit=cover&mask=circle)
 
-
-CEET Vasco Coutinho
-Live Server
-Titulo Chamativo
-Subtitulos
+[@Joseph_L_O](https://www.github.com/joseph-l-o)  [@DennisBozzi](https://github.com/DennisBozzi/)
