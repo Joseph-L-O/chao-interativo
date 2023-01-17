@@ -7,13 +7,11 @@ aprender e se divertir.
 
 <h2 align="center"> Uma amostra de como o projeto está funcionando</h2>
 
-![Gif 2](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gP1N6Uz8_jqBZPEwDGUwl2_uWIsisxgzuvaf2qPzAn-MoPWAHFJo11P-BrAfawW-E98TE2tfYBgGVSvyKB4s--fpOGFZA=w350-h200)  ![Gif 3](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gP9EuZLV1Tpu7yF16HHykCH1zzr-mzdekd91tUwtsY-OhiL995oWJFA0ZIbjPlZM-0xBmNXPWrtcWdv0D856-Qy6Pml0g=w350-h200) 
-![Gif 4](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gMyjD0aY3xnRrUSE3uy1DSOGXT8G7hquln5sFzeZQhbjVdwkdN7OaQqX4OP-Hw3LHxlcZ3Sx0fCRfPUtcP1TJabq65GBQ=w350-h200)
-![Gif 5](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gOG08yL-QU6q-Oz_sgJCdhIjB7RoOqQaPlPD4eLJrBriJsyjhOVC3FiUflQHt7EUX0x23hisZqcwDqZTuz-qukm6Febwg=w350-h200)
+![Gif 2](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gP2JnnWEqYdp2m7AKBx9GP2oAfXnu_MDLnUgvexcc8ZP3yXMzHSvslStvBNlkn07m0fJ_p49-g3lJyOKJ_UCUPvurbJbA=w1366-h615) 
 
 <h2 align="center"> Funcionamento </h2>
 
-![Gif MediaPipe](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gM2MmV71VXcOdpgpv41UsARCM8zRfC_FYEQdI-6BQvBCmzI-rTYtQdIcyVWDHhPku0OxYt0B1YS5Zr1Kd4Fm9q7A_5AkA=w455-h480-iv1) ![Gif Denovo](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gNeyx32Plkp13X2MS7YGxOA_aIFqV9RsltrBVA_Dh_KOdbSXUK9dh07IKbHn9p2MwJpK68pyMUnR7quLCy7EDZCv_KMIg=w400-h1500-iv2)
+![Gif MediaPipe](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gPmuBlvEnK8URGyUh_aIJPysxLel-82EfI4q5Ze0Tdc5CPu3g4znH0pH86ZIhjU-r8Ta1tGK9ezxXD_bvrMXVRXEGL_iw=w1366-h615) 
 
 Nossa câmera ajustada próximo ao projetor faz a captura, manda para o programa, que processa e retorna a imagem projetada no chão.
 
@@ -50,7 +48,7 @@ Com a identificação das mãos e com seus pontos de captura, conseguimos adapta
 - [@DennisBozzi](https://github.com/DennisBozzi/)![](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/98779786&v=4&h=100&w=100&fit=cover&mask=circle)
 
 
-CEET 
+CEET Vasco Coutinho
 Live Server
 Titulo Chamativo
 Subtitulos
